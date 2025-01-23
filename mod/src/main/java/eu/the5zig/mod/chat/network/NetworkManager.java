@@ -52,7 +52,7 @@ import java.util.Queue;
  */
 public class NetworkManager extends SimpleChannelInboundHandler<Packet> {
 
-	private static final String HOST = The5zigMod.DEBUG ? "localhost" : "tcp.5zigreborn.eu";
+	private static final String HOST = The5zigMod.DEBUG ? "localhost" : "127.0.0.1";
 	// 28.04.1999 :P
 	private static final int PORT = 28499;
 	public static NioEventLoopGroup CLIENT_NIO_EVENTLOOP;

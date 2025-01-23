@@ -105,7 +105,7 @@ public class GuiCredits extends Gui {
 		}
 
 		The5zigMod.getAsyncExecutor().execute(() -> {
-			String in = Utils.downloadFile("https://secure.5zigreborn.eu/credits");
+			String in = Utils.downloadFile("https://5zig.kornineq.de/api/credits.php");
 			JsonArray array = new JsonParser().parse(in).getAsJsonArray();
 			for(int i = 0; i < array.size(); i++) {
 				String user = array.get(i).getAsString();

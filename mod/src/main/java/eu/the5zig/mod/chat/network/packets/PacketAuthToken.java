@@ -57,9 +57,9 @@ public class PacketAuthToken implements Packet {
     public void handle() {
         switch (type) {
             case SITE_LOGIN:
-                String baseUrl = The5zigMod.DEBUG ? "http://localhost:8080" : "https://secure.5zigreborn.eu";
+                String baseUrl = The5zigMod.DEBUG ? "http://localhost:8080" : "https://5zig.kornineq.de";
                 try {
-                    URI uri = new URI(baseUrl + "/login?token=" + token + "&remember=" + remember);
+                    URI uri = new URI(baseUrl + "/api/login.php?token=" + token + "&remember=" + remember);
                     if (Desktop.isDesktopSupported()) {
                         Desktop.getDesktop().browse(uri);
                     } else {

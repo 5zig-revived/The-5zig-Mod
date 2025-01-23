@@ -36,7 +36,7 @@ public class Version {
     public static String UPDATE;
 
     public static String getVersionDisplay() {
-        return ChatColor.GOLD + "The 5zig Mod b" + Version.VERSION;
+        return ChatColor.GOLD + "The 5zig Mod v" + Version.VERSION;
     }
 
     static {

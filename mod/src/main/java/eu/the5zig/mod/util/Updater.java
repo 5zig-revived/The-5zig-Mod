@@ -50,7 +50,7 @@ public class Updater implements Runnable {
     @Override
     public void run() {
         try {
-            URL url = new URL((The5zigMod.DEBUG ? "http://localhost:8080" : "https://secure.5zigreborn.eu") + "/version?mc=" + Version.MCVERSION + "&new=1");
+            URL url = new URL((The5zigMod.DEBUG ? "http://localhost:8080" : "https://5zig.kornineq.de/api/version.php") + "/version.php?mc=" + Version.MCVERSION + "&new=1");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.addRequestProperty("User-Agent", "5zig/" + Version.VERSION);
             Download download = The5zigMod.gson.fromJson(IOUtils.toString(connection.getInputStream()), Download.class);

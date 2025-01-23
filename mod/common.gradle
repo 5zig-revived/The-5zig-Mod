@@ -85,7 +85,8 @@ tasks.withType(ProcessResources).each { task ->
 task buildInfo {
     def cmd = "git rev-list --count master"
     def proc = cmd.execute()
-    project.ext.set("buildNumber", proc.text.trim())
+    //project.ext.set("buildNumber", proc.text.trim())
+    project.ext.set("buildNumber", "1.0.0")
 }
 
 jar.dependsOn(buildInfo)
